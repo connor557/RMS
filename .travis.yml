@@ -1,12 +1,12 @@
 language: ruby
 
 rvm:
- - 2.5
+ - 2.2
  - jruby
  - rbx-2
 
 install:
- - gem install eventmachine zlib
+ - gem install eventmachine
 
 script:
  - ruby bin/server_test.rb
