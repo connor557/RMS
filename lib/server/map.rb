@@ -24,14 +24,12 @@ module Server
       #    index = y + (z * (Size_Y+1)) + (x * (Size_Y+1) * (Size_Z+1))
       attr_reader :blocks
 
-      # TODO: take coordinates and size into account
       def initialize(x, y, z, size_x, size_y, size_z, blocks)
         @x, @y, @z = x, y, z
         @size_x, @size_y, @size_z = size_x, size_y, size_z
         @blocks = blocks
       end
 
-      # TODO: move this out of the Map module
       # @return [String] the zlib deflated byte data, ready to be sent to the client
       def to_bytes
         buffer = IO::Buffer.new

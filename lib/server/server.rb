@@ -23,14 +23,14 @@ module Server
       attr_reader :clients
 
       def start(options)
-        @host, @port = options[:host], options[:port]
+        @host, @port, @name, @desc = options[:host], options[:port], name[:name], desc[:desc]
         @clients = []
 
         EventMachine::run do
           EventMachine::epoll
           EventMachine::start_server(@host, @port, Connection)
 
-          puts "Server listening for connections on #{@host}:#{@port}..."
+          puts "Server ready for players on #{@host}:#{@port}..."
         end
       end
     end

@@ -13,10 +13,15 @@ require 'server/client/client'
 require 'server/model'
 require 'server/server'
 
+# TODO: Add support for passing description/name at runtime.
+# These are the main server options.
 module Server
   DEFAULT_OPTIONS = {
     :host => 'localhost',
     :port => 25565,
+    :stub -> 'nil',
+    :name -> 'devserver',
+    :desc -> 'A Minecraft server',
   }
 
   def self.start(options = {})
