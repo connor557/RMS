@@ -19,9 +19,9 @@ module Server
   DEFAULT_OPTIONS = {
     :host => 'localhost',
     :port => 25565,
-    :stub -> 'nil',
-    :name -> 'devserver',
-    :desc -> 'A Minecraft server',
+    :stub => 'nil',
+    :name => 'devserver',
+    :desc => 'A Minecraft server',
   }
 
   def self.start(options = {})
