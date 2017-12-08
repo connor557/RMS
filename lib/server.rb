@@ -20,8 +20,8 @@ module Server
     :host => 'localhost',
     :port => 25565,
     :stub => 'nil',
-    :name => 'devserver',
-    :desc => 'A Minecraft server',
+    :name => 'flash-xmas',
+    :desc => 'RubyMine Flash: Merry Christmas yall!',
   }
 
   def self.start(options = {})
