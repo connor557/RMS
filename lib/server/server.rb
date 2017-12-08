@@ -31,6 +31,7 @@ module Server
           EventMachine::start_server(@host, @port, Connection)
 
           puts "Server ready for players on #{@host}:#{@port}..."
+          puts "Server name is currently set to #{@name}."
         end
       end
     end

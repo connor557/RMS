@@ -23,7 +23,8 @@ module Server
           send_map_pre_chunks
           send_map_chunks
           send_player_position_and_look
-          send_message "Hello!"
+          send_message "Hello, and good day to you!"
+          send_message "Welcome to the RubyMine test server."
 
           # Notify other clients that a new client has joined
           other_clients do |me|
@@ -40,6 +41,24 @@ module Server
             fmt = context[:me].player.name + ": " + context[:message]
             send_message fmt
           end
+        when :chat_message
+          message = packet.mapping[:message]
+            if
+              message == "/helpadmin"
+            then  
+              puts "Someone needs help from an administrator."
+              send_message => self "Help is on the way!"
+            end
+        end
+        when :chat_message
+          message = packet.mapping[:message]
+            if
+              message == "/blowupmyserver"
+            then  
+              puts "Someone used a command they shouldn't!"
+              send_message => self "Hey! Don't use that command!"
+            end
+        end
         when :player_position
           update_movement(packet)
         when :player_look
