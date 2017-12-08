@@ -1,6 +1,7 @@
 libdir = File.dirname(__FILE__)
 $LOAD_PATH.unshift libdir unless $LOAD_PATH.include? libdir
 
+# TODO: Add support for MINGW EventMachine/ZLib
 require 'eventmachine'
 require 'zlib'
 

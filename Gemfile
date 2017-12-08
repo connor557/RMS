@@ -1,1 +1,2 @@
 gem 'eventmachine'
+gem 'zlib'

@@ -6,6 +6,7 @@ rvm:
 
 install:
  - gem install eventmachine
+ - gem install zlib
 
 script:
  - ruby bin/server_test.rb
