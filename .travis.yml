@@ -1,0 +1,11 @@
+language: ruby
+
+rvm:
+ - 2.2
+ - jruby
+
+install:
+ - gem install eventmachine
+
+script:
+ - ruby bin/server_test.rb
