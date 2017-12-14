@@ -5,7 +5,7 @@ rvm:
  - jruby
 
 install:
- - gem install eventmachine
+ - gem install eventmachine zlib json logger
 
 script:
  - ruby bin/server_test.rb

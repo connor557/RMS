@@ -41,23 +41,6 @@ module Server
             fmt = context[:me].player.name + ": " + context[:message]
             send_message fmt
           end
-        when :chat_message
-          message = packet.mapping[:message]
-            if
-              message == "/helpadmin"
-            then  
-              puts "Someone needs help from an administrator."
-              send_message => self "Help is on the way!"
-            end
-        end
-        when :chat_message
-          message = packet.mapping[:message]
-            if
-              message == "/blowupmyserver"
-            then  
-              puts "Someone used a command they shouldn't!"
-              send_message => self "Hey! Don't use that command!"
-            end
         end
         when :player_position
           update_movement(packet)

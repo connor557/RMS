@@ -1,0 +1,11 @@
+{
+  "srv_host": "localhost",
+  "srv_port": 25565,
+  "srv_name": "houston-test",
+  "srv_desc": "This is a Rubymine Codename Houston server.",
+  "config_terrain": "flatgrass",
+  "config_version": "MC v1.12.2 Compatible",
+  "config_protocol": "BetaProtocol",
+  "config_auth": "true",
+  "config_world": "world1",
+}
