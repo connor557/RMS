@@ -9,3 +9,6 @@ install:
 
 script:
  - ruby bin/server_test.rb
+
+addons:
+  artifacts: true
